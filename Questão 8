@@ -1,0 +1,40 @@
+/*8.Crie um vetor de 6 nomes (strings). O programa deve: Ler os nomes, perguntar um nome a ser buscado, informar se ele existe no vetor.*/
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+
+    string nomes[6];
+    string busca;
+    int posicao = -1;
+
+    // Leitura dos nomes
+    for (int i = 0; i < 6; i++) {
+        cout << "Digite o nome " << i + 1 << ": ";
+        cin >> nomes[i];
+    }
+
+    // Nome para busca
+    cout << "Digite um nome para buscar: ";
+    cin >> busca;
+
+    // Procura no vetor
+    for (int i = 0; i < 6; i++) {
+        if (nomes[i] == busca) {
+            posicao = i;
+            break;
+        }
+    }
+
+    // Resultado
+    if (posicao != -1) {
+        cout << "O nome " << busca << " ESTA no vetor." << endl;
+        cout << "Ele aparece na posicao " << posicao + 1 << "." << endl;
+    } else {
+        cout << "O nome " << busca << " NAO esta no vetor." << endl;
+    }
+
+    return 0;
+}
+
