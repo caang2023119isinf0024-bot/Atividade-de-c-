@@ -1,0 +1,22 @@
+/*4.Crie um programa que: um vetor unidimensional de 5 números inteiros, ao usuário para digitar os mesmos, todos os valores.*/
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeros[5];
+
+    // Solicita ao usuário que digite 5 números
+    for (int i = 0; i < 5; i++) {
+        cout << "Digite o " << i + 1 << "° número: ";
+        cin >> numeros[i];
+    }
+
+    // Exibe os números digitados
+    cout << "Você digitou os seguintes números: ";
+    for (int i = 0; i < 5; i++) {
+        cout << numeros[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
